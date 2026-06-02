@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="KrishnaiWears.Client/KrishnaiWears.Client.csproj" />
+  <Project Path="KrishnaiWears/KrishnaiWears.csproj" />
+</Solution>
