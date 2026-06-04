@@ -1,16 +1,15 @@
 using KrishnaiWears.Client.Pages;
 using KrishnaiWears.Components;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("KrishnaiWearsContext") ?? throw new InvalidOperationException("Connection string 'KrishnaiWearsContext' not found.");
-
-builder.Services.AddDbContext<KrishnaiWearsContext>(options => options.UseSqlServer(connectionString));
-
+builder.Services.AddDbContext<KrishnaiWearsContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("KrishnaiWearsContext") ?? throw new InvalidOperationException("Connection string 'KrishnaiWearsContext' not found.")));
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
-
+builder.Services.AddControllers();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,7 +27,7 @@ app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages:
 app.UseHttpsRedirection();
 
 app.UseAntiforgery();
-
+app.MapControllers();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()

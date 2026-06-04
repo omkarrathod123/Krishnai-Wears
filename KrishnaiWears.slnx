@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="KrishnaiWears.Client/KrishnaiWears.Client.csproj" />
+  <Project Path="KrishnaiWears.Shared/KrishnaiWears.Shared.csproj" Id="6945dd76-053b-4ab0-b342-764f7adec576" />
   <Project Path="KrishnaiWears/KrishnaiWears.csproj" />
 </Solution>
