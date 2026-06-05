@@ -4,8 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddDbContext<KrishnaiWearsContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("KrishnaiWearsContext") ?? throw new InvalidOperationException("Connection string 'KrishnaiWearsContext' not found.")));
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
