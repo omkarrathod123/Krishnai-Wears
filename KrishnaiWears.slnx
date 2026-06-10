@@ -1,5 +1,10 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Client.Dockerfile" />
+    <File Path="docker-compose.yml" />
+    <File Path="nginx.conf" />
+    <File Path="Server.Dockerfile" />
+  </Folder>
   <Project Path="KrishnaiWears.Client/KrishnaiWears.Client.csproj" />
-  <Project Path="KrishnaiWears.Shared/KrishnaiWears.Shared.csproj" Id="6945dd76-053b-4ab0-b342-764f7adec576" />
   <Project Path="KrishnaiWears/KrishnaiWears.csproj" />
 </Solution>
