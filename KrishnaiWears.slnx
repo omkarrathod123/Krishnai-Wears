@@ -6,5 +6,6 @@
     <File Path="Server.Dockerfile" />
   </Folder>
   <Project Path="KrishnaiWears.Client/KrishnaiWears.Client.csproj" />
+  <Project Path="KrishnaiWears.Shared/KrishnaiWears.Shared.csproj" />
   <Project Path="KrishnaiWears/KrishnaiWears.csproj" />
 </Solution>
